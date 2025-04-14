@@ -1,0 +1,22 @@
+Algoritmo ContarDigitos
+    Definir num, contador Como Entero
+    Escribir "Ingrese un número:"
+    Leer num
+
+    Si num = 0 Entonces
+        contador <- 1
+    Sino
+        contador <- 0
+
+        Si num < 0 Entonces
+            num <- num * (-1)
+        FinSi
+
+        Mientras num > 0 Hacer
+            num <- trunc(num / 10)
+            contador <- contador + 1
+        FinMientras
+    FinSi
+
+    Escribir "El número tiene ", contador, " dígitos."
+FinAlgoritmo
